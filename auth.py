@@ -20,9 +20,8 @@ def start():
     return getAuthCode()
 
 def getAuthCode():
-    #This is called when we need to begin an oauth handshake. It requests the OAuth code and tell spotify who we are.
-    #The user will be redirected to the spotify login page. After logging in (successfully) they will be returned to our 
-    # site with a uniqe code that identifies us.
+    #This is called when we need to begin an oauth handshake. It requests the OAuth code and tells spotify who we are.
+    # This data is returned back to us using the redirect_uri, we will use it for the next step.
     codeparams = urllib.parse.urlencode({
                 'client_id':CLIENT_ID,
                 'response_type':'code',
