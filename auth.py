@@ -33,7 +33,7 @@ def getAuthCode():
 @app.route('/auth')
 def auth():
     #This is the second half of the OAuth handshake. With a uniqe code in hand (identifying the app) we can ask spotify 
-    # to request access on behalf of the user. This is where the user is presented with a login screen. They will at-once
+    # to request access on behalf of the user. This is where the user is presented with a login screen. They will 
     # authenticate themselves and either grant or deny access.
     try:
         code = request.args.get('code')
